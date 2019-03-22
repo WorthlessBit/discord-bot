@@ -1,4 +1,6 @@
 import discord
+import sys
+
 
 client = discord.Client()
 token = open("config.txt", "r").read()
@@ -11,7 +13,8 @@ async def on_ready():
 async def on_message(message)
 	print(f"{message.channel}: {message.author}: {message.author.name}: {message.content}")
 
-	if "go to sleep" in message.contet.lower():
+	if "logout()" == message.contet.lower():
 		await client.close()
+		sys.exit()
 
 client.run(token)
