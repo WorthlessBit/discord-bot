@@ -1,1 +1,1 @@
-worker: python sageata.py
+worker: python /src/sageata.py
